@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>简记药箱 · 使用手册</title>
 <style>
-  :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --accent: #FF9500; }
+  :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --blue: #007AFF; --accent: #FF9500; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
   .hero { background: linear-gradient(135deg, var(--primary) 0%, #1a8a9f 100%); color: #fff; text-align: center; padding: 56px 20px 40px; }
@@ -23,6 +23,7 @@
   ul, ol { padding-left: 22px; margin-bottom: 8px; }
   li { margin-bottom: 6px; }
   strong { color: var(--text); }
+  .en { color: var(--blue); }
   .tip { background: #f0f9fb; border-left: 4px solid var(--primary); border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: .92rem; color: var(--text-secondary); }
   .warn { background: #fff7f0; border-left: 4px solid var(--accent); border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: .92rem; color: var(--text-secondary); }
   .step { display: flex; gap: 10px; margin: 10px 0; }
@@ -43,275 +44,340 @@
 
 <div class="container">
 
-<p class="update-date">📅 最后更新日期：2026 年 7 月</p>
+<p class="update-date">📅 最后更新日期：2026 年 9 月</p>
 
 <div class="toc">
-  <h2>目录</h2>
-  <a href="#quick">1. 快速上手（首次使用）</a><br>
-  <a href="#box">2. 药箱管理</a><br>
-  <a href="#med">3. 添加药品</a><br>
-  <a href="#batch">4. 库存与批次管理</a><br>
-  <a href="#reminder">5. 用药提醒</a><br>
-  <a href="#punch">6. 今日打卡</a><br>
-  <a href="#history">7. 历史记录与统计</a><br>
-  <a href="#data">8. 数据备份与恢复</a><br>
-  <a href="#pro">9. Pro 会员</a><br>
-  <a href="#settings">10. 设置与个性化</a><br>
-  <a href="#faq">11. 常见问题与注意事项</a>
+  <h2>目录 / Contents</h2>
+  <a href="#zh">中文版</a> · <a href="#en">English</a>
 </div>
 
-<!-- ========== 1. 快速上手 ========== -->
-<div class="card" id="quick">
+<!-- ==================== 中文版 ==================== -->
+<div id="zh">
+
+<div class="card" id="zh-quick">
 <h2>1. 快速上手（首次使用）</h2>
-<p>第一次打开 App 时，会依次看到 5 页引导介绍：拍照添加、智能偏移提醒、智能排序批次、用药记录一目了然、多药箱管理。右上角可点「跳过」，最后一页点「开始使用」进入主界面。</p>
-
-<div class="step"><div class="step-num">1</div><div><strong>允许通知</strong>：首次添加药品时会请求「通知」权限，请选择「允许」。用药提醒依赖此权限，若拒绝，提醒将无法送达。</div></div>
-<div class="step"><div class="step-num">2</div><div><strong>确认默认药箱</strong>：系统已为你建好一个「本人」药箱，可直接使用，也可随时改名。</div></div>
-<div class="step"><div class="step-num">3</div><div><strong>添加第一款药品</strong>：进入「药箱」页 → 点右下角「+」→ 拍照或手动录入药品。</div></div>
-<div class="step"><div class="step-num">4</div><div><strong>开始打卡</strong>：到用药时间，今日页会提醒你打卡，点一下即可完成记录。</div></div>
-
-<div class="tip">💡 主界面底部有 3 个标签：<strong>今日</strong>（当天打卡）、<strong>药箱</strong>（管理药品）、<strong>数据</strong>（历史与统计）。</div>
+<p>第一次打开 App，你会依次看到 5 页引导介绍。右上角可点「跳过」，最后一页点「开始使用」进入主界面。</p>
+<div class="step"><div class="step-num">1</div><div><strong>允许通知</strong>：首次添加药品时会弹出「通知」请求，请点「允许」。用药提醒依赖此权限。</div></div>
+<div class="step"><div class="step-num">2</div><div><strong>确认药箱</strong>：系统已为你建好「本人」药箱，可直接用，也可改名。</div></div>
+<div class="step"><div class="step-num">3</div><div><strong>添加药品</strong>：底部切到「药箱」页 → 点右下角「+」→ 拍照或手动录入。</div></div>
+<div class="step"><div class="step-num">4</div><div><strong>开始打卡</strong>：到用药时间，「今日」页会出现待办，点一下即可打卡。</div></div>
+<div class="tip">💡 底部三个标签：<strong>今日</strong>（当天打卡）、<strong>药箱</strong>（管理药品）、<strong>数据</strong>（历史与统计）。</div>
 </div>
 
-<!-- ========== 2. 药箱管理 ========== -->
-<div class="card" id="box">
+<div class="card" id="zh-box">
 <h2>2. 药箱管理</h2>
-<p>「药箱」用来给家人或不同场景分组管理药品，各药箱的药品、提醒、记录互不影响。</p>
-
-<h3>2.1 查看 / 切换药箱</h3>
-<p>进入「药箱」页，顶部标签栏可左右滑动切换药箱；点某个药箱标签即进入该药箱。</p>
-
+<p>「药箱」用来给家人或不同场景分组管理药品，各药箱互不影响。</p>
+<h3>2.1 切换药箱</h3>
+<p>「药箱」页顶部标签栏左右滑动切换；点某个标签进入该药箱。</p>
 <h3>2.2 管理药箱</h3>
-<p>点左上角「管理」进入药箱管理页，可进行：</p>
+<p>点左上角「管理」：</p>
 <ul>
-  <li><strong>新建药箱</strong>：点「+」新建，输入名称即可。</li>
-  <li><strong>重命名</strong>：点药箱右侧的编辑图标改名。</li>
-  <li><strong>关闭（封存）</strong>：临时停用某个药箱，该药箱的药品与提醒会暂停，随时可重新打开。</li>
-  <li><strong>删除</strong>：删除药箱，其中的药品会移入「回收站」。</li>
+  <li><strong>新建</strong>：点「+」新建，输入名称。</li>
+  <li><strong>重命名</strong>：点药箱右侧编辑图标。</li>
+  <li><strong>关闭（封存）</strong>：临时停用药箱，药品与提醒暂停，可随时重开。</li>
+  <li><strong>删除</strong>：删除药箱，药品移入「回收站」。</li>
 </ul>
-
-<div class="tip">💡 <strong>免费会员</strong>最多 1 个药箱；<strong>PRO 会员</strong>最多 10 个药箱。</div>
-<div class="warn">⚠️ 关闭药箱后，该药箱的提醒会停止；重新打开药箱后提醒自动恢复。</div>
+<div class="tip">💡 免费会员 1 个药箱；PRO 会员最多 10 个。</div>
+<div class="warn">⚠️ 关闭药箱后提醒停止，重开后自动恢复。</div>
 </div>
 
-<!-- ========== 3. 添加药品 ========== -->
-<div class="card" id="med">
+<div class="card" id="zh-med">
 <h2>3. 添加药品</h2>
-
-<h3>3.1 两种添加方式</h3>
+<h3>3.1 两种方式</h3>
 <ul>
-  <li><strong>拍照识别</strong>：对准药盒拍摄，App 自动识别药名、剂量、单位（需要相机权限）。</li>
-  <li><strong>手动录入</strong>：手动填写药品信息。</li>
+  <li><strong>拍照识别</strong>：拍药盒，自动识别药名/剂量/单位。</li>
+  <li><strong>手动录入</strong>：手动填写。</li>
 </ul>
-
-<h3>3.2 药品信息字段</h3>
+<h3>3.2 信息字段</h3>
 <ul>
-  <li><strong>药品名称</strong>：必填，如「阿莫西林胶囊」。</li>
-  <li><strong>自定义名</strong>：可选，给药品起个易记的别名（如「老爸的降压药」）。</li>
-  <li><strong>规格 / 厂家</strong>：可选，用于记录药品规格和生产厂家。</li>
-  <li><strong>照片</strong>：可添加多张药盒照片。</li>
-  <li><strong>有效期</strong>：药品的到期日期，用于临期提醒。</li>
+  <li><strong>药品名称</strong>：必填。</li>
+  <li><strong>自定义名</strong>：可选别名，如「老爸的降压药」。</li>
+  <li><strong>规格 / 厂家 / 照片</strong>：可选。</li>
+  <li><strong>有效期</strong>：用于临期提醒。</li>
 </ul>
-
 <h3>3.3 用法用量</h3>
 <ul>
-  <li><strong>每次用量</strong>：如「1 片」「5 毫升」。</li>
-  <li><strong>单位</strong>：片、粒、毫升等。</li>
-  <li><strong>用药时间</strong>：每天吃几次、几点吃，如「08:00、20:00」。</li>
+  <li><strong>每次用量 + 单位</strong>：如 1 片 / 5 毫升。</li>
+  <li><strong>用药时间</strong>：如 08:00、20:00。</li>
   <li><strong>用餐要求</strong>：餐前 / 餐后 / 无要求 / 遵医嘱。</li>
 </ul>
-
 <h3>3.4 起止日期</h3>
-<p>设置「开始日期」和「结束日期」，可让药品按疗程自动开始/停止提醒。</p>
-
-<div class="tip">💡 <strong>免费会员</strong>最多 3 款药品、1 个提醒；<strong>PRO 会员</strong>不限药品数量和提醒数量。</div>
+<p>设「开始日期」和「结束日期」，药品按疗程自动开始/停止提醒。</p>
+<div class="tip">💡 免费会员最多 3 款药品、1 个提醒；PRO 不限。</div>
 </div>
 
-<!-- ========== 4. 库存与批次管理 ========== -->
-<div class="card" id="batch">
+<div class="card" id="zh-batch">
 <h2>4. 库存与批次管理</h2>
-<p>「批次」指同一药品不同批次的库存。每批可有不同的<strong>有效期</strong>和<strong>用法用量</strong>。</p>
-
-<h3>4.1 添加库存（批次）</h3>
-<p>添加药品时填写「库存数量」和「有效期」，即创建第一个批次。之后可在药品详情页「补充库存」添加新批次。</p>
-
-<h3>4.2 先到期先用（FIFO）</h3>
-<p>系统会自动按「有效期最早」的顺序扣减库存，先到期的批次先用，避免过期浪费。</p>
-
+<p>「批次」指同一药品不同批次的库存，每批可有不同的有效期和用法用量。</p>
+<h3>4.1 添加库存</h3>
+<p>添加药品时填「库存数量」和「有效期」即创建第一批；之后在药品详情页「补充库存」加新批次。</p>
+<h3>4.2 先到期先用</h3>
+<p>系统自动按「有效期最早」扣减库存，先到期先用。</p>
 <h3>4.3 批次级用法覆盖</h3>
-<p>可为某个批次单独设置不同的用量或用药时间。例如旧批次每次 1 片，新批次每次 2 片——切到新批次时，提醒的用量会自动跟着变。</p>
-
-<div class="warn">⚠️ 当前批次用完且下一个批次用法不同时，App 会弹出提示告知「用药时间/用量已改变」，请留意并确认是否需要调整。</div>
-<div class="tip">💡 库存只剩最后 1 次用量、或批次 7 天内到期时，会有临期/低库存提醒。</div>
+<p>可为某批次单独设置用量/时间。切到新批次时，提醒用量自动跟着变。</p>
+<div class="warn">⚠️ 当前批次用完且下一批用法不同时，会弹提示告知「用药时间/用量已改变」。</div>
+<div class="tip">💡 库存剩最后 1 次用量、或批次 7 天内到期，会有临期/低库存提醒。</div>
 </div>
 
-<!-- ========== 5. 用药提醒 ========== -->
-<div class="card" id="reminder">
+<div class="card" id="zh-reminder">
 <h2>5. 用药提醒</h2>
-
 <h3>5.1 通知权限</h3>
-<p>请在系统「设置 → 通知 → 简记药箱」中允许通知，否则用药提醒无法送达。</p>
-
+<p>请在系统「设置 → 通知 → 简记药箱」允许通知。</p>
 <h3>5.2 智能偏移提醒</h3>
-<p>开启后，通知会在你设定的用药时间附近随机浮动（前后几分钟），打破固定时间的「疲劳记忆」，让提醒更有效。可在「设置 → 通知」中调整偏移范围（5/10/15/30 分钟）或关闭。</p>
-
+<p>开启后通知在设定时间附近随机浮动，打破疲劳记忆。范围可调（5/10/15/30 分钟），也可关闭。</p>
 <h3>5.3 稍后提醒</h3>
-<p>通知弹出后，可点「稍后提醒」，15 分钟后再次提醒。</p>
-
+<p>通知弹出后点「稍后提醒」，15 分钟后再提醒。</p>
 <h3>5.4 锁屏隐私</h3>
-<p>在「设置 → 通知」中开启「隐藏药品名称」，锁屏通知将不显示药名，保护隐私。</p>
+<p>「设置 → 通知」开启「隐藏药品名称」，锁屏不显示药名。</p>
 </div>
 
-<!-- ========== 6. 今日打卡 ========== -->
-<div class="card" id="punch">
+<div class="card" id="zh-punch">
 <h2>6. 今日打卡</h2>
-<p>「今日」页会按时间列出当天所有待办用药。打卡状态由系统根据实际时间自动判定：</p>
+<p>「今日」页按时间列出当天所有待办。打卡状态由实际时间自动判定：</p>
 <ul>
-  <li><strong>按时</strong>：在计划时间 ±30 分钟内打卡。</li>
-  <li><strong>提前</strong>：早于计划时间 30 分钟以上打卡。</li>
-  <li><strong>延后</strong>：晚于计划时间 30 分钟以上打卡。</li>
+  <li><strong>按时</strong>：计划时间 ±30 分钟内。</li>
+  <li><strong>提前</strong>：早于计划 30 分钟以上。</li>
+  <li><strong>延后</strong>：晚于计划 30 分钟以上。</li>
 </ul>
-
 <h3>6.1 打卡方式</h3>
 <ul>
-  <li><strong>单条打卡</strong>：点某条待办，再点「打卡」。</li>
-  <li><strong>一键打卡</strong>：点顶部「一键打卡」，批量完成所有可打卡项。</li>
+  <li><strong>单条打卡</strong>：点待办 → 点「打卡」。</li>
+  <li><strong>一键打卡</strong>：点顶部「一键打卡」批量完成。</li>
 </ul>
-
 <h3>6.2 其他操作</h3>
 <ul>
-  <li><strong>跳过</strong>：本次不吃了，标记为跳过（不扣库存）。</li>
-  <li><strong>忘记</strong>：忘记吃了，标记为忘记（不扣库存）。</li>
-  <li><strong>忽略</strong>：左滑忽略某条今日提醒（不计入统计）。</li>
+  <li><strong>跳过</strong>：本次不吃（不扣库存）。</li>
+  <li><strong>忘记</strong>：忘记吃（不扣库存）。</li>
+  <li><strong>忽略</strong>：左滑忽略某条（不计入统计）。</li>
 </ul>
-
-<div class="warn">⚠️ 打卡会<strong>自动扣减库存</strong>。若库存不足一次用量，将无法打卡并提示补充库存。</div>
-<div class="tip">💡 误操作可到「数据 → 打卡记录」里<strong>重新打卡</strong>或<strong>删除记录</strong>，删除/重置会<strong>自动退回库存</strong>。</div>
+<div class="warn">⚠️ 打卡自动扣库存；库存不足一次用量会拦截并提示补货。</div>
+<div class="tip">💡 误操作可到「数据 → 打卡记录」重新打卡/删除，会自动退回库存。</div>
 </div>
 
-<!-- ========== 7. 历史记录与统计 ========== -->
-<div class="card" id="history">
+<div class="card" id="zh-history">
 <h2>7. 历史记录与统计</h2>
-<p>进入「数据」标签页。</p>
-
 <h3>7.1 打卡记录</h3>
-<p>按天查看历史打卡，顶部有月历可快速跳转。点某条记录可进行：</p>
-<ul>
-  <li><strong>补录</strong>：对漏打的记录补打卡。</li>
-  <li><strong>重新打卡</strong>：撤销原记录并退回库存，重新打卡。</li>
-  <li><strong>删除</strong>：删除记录（退回库存）。</li>
-  <li><strong>标记为忘记</strong>：把待办标记为「忘记」。</li>
-</ul>
-
+<p>按天查看，顶部月历可跳转。点记录可：补录、重新打卡、删除、标记忘记。</p>
 <h3>7.2 用药统计</h3>
-<p>可视化饼图展示各药品占比，并提供：</p>
-<ul>
-  <li><strong>总打卡</strong>：累计打卡次数。</li>
-  <li><strong>药品种类</strong>：涉及多少种药品。</li>
-  <li><strong>按时率</strong>：按时+提前打卡的比例。</li>
-  <li><strong>批次消耗</strong>：各批次的用量汇总。</li>
-  <li><strong>打卡时段分布</strong>：一天中哪个时段吃药最多。</li>
-</ul>
-<p>顶部可切换「本月 / 本年 / 全部」三个时间范围。</p>
-
+<p>饼图 + 总打卡 / 药品种类 / 按时率 / 批次消耗 / 打卡时段分布。可切「本月 / 本年 / 全部」。</p>
 <h3>7.3 导出报表（PRO）</h3>
-<p>PRO 会员可导出定制化 PDF 用药报告，包含统计概览、用药清单、打卡明细、批次消耗。</p>
+<p>导出 PDF 用药报告。</p>
 </div>
 
-<!-- ========== 8. 数据备份与恢复 ========== -->
-<div class="card" id="data">
+<div class="card" id="zh-data">
 <h2>8. 数据备份与恢复</h2>
-
-<h3>8.1 本地备份（JSON 文件）</h3>
-<p>「设置 → 本地数据备份」：</p>
-<ul>
-  <li><strong>导出</strong>：生成一个 JSON 备份文件，可保存到「文件」或分享到其他 App。</li>
-  <li><strong>导入</strong>：选择之前导出的 JSON 文件恢复数据（会覆盖当前数据，操作前建议先备份）。</li>
-</ul>
-
+<h3>8.1 本地备份（JSON）</h3>
+<p>「设置 → 本地数据备份」：导出 JSON 文件 / 导入恢复（覆盖当前数据）。</p>
 <h3>8.2 iCloud 数据备份（PRO）</h3>
 <p>「设置 → iCloud 同步 → 数据备份」：</p>
 <ul>
   <li><strong>立即备份</strong>：手动创建一份备份到 iCloud Drive。</li>
-  <li><strong>恢复</strong>：左滑某份备份，选「恢复」即可还原。</li>
-  <li><strong>删除</strong>：左滑可删除旧备份。</li>
+  <li><strong>恢复</strong>：左滑某份备份 → 点「恢复」。</li>
+  <li><strong>删除</strong>：左滑某份备份 → 点「删除」。</li>
+  <li><strong>分享</strong>：右滑某份备份 → 点「分享」，把备份文件分享/保存到其他 App。</li>
 </ul>
-<p>每台设备最多保留 5 份备份，超出后自动删除最旧的。</p>
-
+<p>每台设备最多保留 <strong>20 份</strong>备份，超出后自动删除该设备最旧的。</p>
+<p><strong>设备同步说明</strong>：iCloud「自动同步」数据没有设备数量限制——只要登录同一个 iCloud 账号，所有设备都会同步。上面的「每台设备 20 份」仅指 iCloud Drive 里的<strong>备份文件快照</strong>，按设备区分、各自保留。</p>
 <h3>8.3 iCloud 自动同步（PRO）</h3>
-<p>开启后，换设备或重装 App，登录同一 iCloud 账号即可自动同步药品数据与设置。</p>
-
-<div class="warn">⚠️ <strong>免费会员</strong>仅支持导出/导入「本人」药箱的数据；多药箱备份需 PRO 会员。</div>
-<div class="tip">💡 删除 App 后本地数据会清空；开启 iCloud 同步（PRO）或提前导出备份，可避免数据丢失。</div>
+<p>开启后，换设备或重装，登录同一 iCloud 账号即自动同步药品与设置。</p>
+<div class="warn">⚠️ 免费会员仅支持导出/导入「本人」药箱；多药箱备份需 PRO。</div>
+<div class="tip">💡 删除 App 会清空本地数据；开 iCloud 同步或提前导出备份可避免丢失。</div>
 </div>
 
-<!-- ========== 9. Pro 会员 ========== -->
-<div class="card" id="pro">
+<div class="card" id="zh-pro">
 <h2>9. PRO 会员</h2>
-<p>PRO 会员解锁全部功能：</p>
-<ul>
-  <li>多药箱管理（最多 10 个，互不干扰）</li>
-  <li>不限药品数量、不限提醒数量</li>
-  <li>多张药盒照片存档</li>
-  <li>导出用药数据报表（PDF）</li>
-  <li>iCloud 自动同步与云备份/恢复</li>
-  <li>更多预设主题色</li>
-  <li>后续新功能永久免费更新</li>
-</ul>
-
+<p>PRO 解锁：多药箱（10 个）、不限药品/提醒、多张照片、导出报表、iCloud 同步与云备份、更多主题色、后续功能免费更新。</p>
 <h3>9.1 购买 / 兑换 / 恢复</h3>
-<p>在付费墙页底部：</p>
+<p>付费墙底部：</p>
 <ul>
   <li><strong>立即解锁</strong>：App Store 内购。</li>
-  <li><strong>我有兑换码</strong>：输入 8 位兑换码解锁。</li>
-  <li><strong>恢复购买（兑换）</strong>：找回之前购买或兑换过的 PRO 权益。</li>
+  <li><strong>我有兑换码</strong>：输 8 位兑换码。</li>
+  <li><strong>恢复购买（兑换）</strong>：找回已购/已兑换的 PRO。</li>
 </ul>
-<div class="tip">💡 恢复购买需要联网（Wi-Fi 或蜂窝数据）。</div>
+<div class="tip">💡 恢复购买需联网（Wi-Fi 或蜂窝）。</div>
 </div>
 
-<!-- ========== 10. 设置与个性化 ========== -->
-<div class="card" id="settings">
+<div class="card" id="zh-settings">
 <h2>10. 设置与个性化</h2>
-<p>进入「设置」标签页，可进行：</p>
 <ul>
-  <li><strong>主题色</strong>：更换 App 主色。</li>
-  <li><strong>文字大小</strong>：调整全局字号。</li>
-  <li><strong>外观模式</strong>：浅色 / 深色 / 跟随系统。</li>
-  <li><strong>语言</strong>：简体中文 / 繁體中文 / English / 日本語 / 跟随系统。</li>
-  <li><strong>通知</strong>：智能偏移、隐藏药名、低库存提醒等。</li>
+  <li><strong>主题色</strong> / <strong>文字大小</strong> / <strong>外观模式</strong>（浅/深/跟随系统）。</li>
+  <li><strong>语言</strong>：简体 / 繁體 / English / 日本語 / 跟随系统。</li>
+  <li><strong>通知</strong>：智能偏移、隐藏药名、低库存提醒。</li>
   <li><strong>清空数据</strong>：清空药箱与药品（保留记录）或清空全部本地数据（不可恢复）。</li>
 </ul>
 </div>
 
-<!-- ========== 11. 常见问题与注意事项 ========== -->
-<div class="card" id="faq">
+<div class="card" id="zh-faq">
 <h2>11. 常见问题与注意事项</h2>
-
-<h3>11.1 数据存在哪里？</h3>
-<p>你的所有用药数据默认只保存在<strong>设备本地</strong>，不会上传到任何服务器。开启 iCloud 同步（PRO）后，通过你自己的 iCloud 私密同步。</p>
-
+<h3>11.1 数据存哪？</h3>
+<p>默认仅存<strong>设备本地</strong>；开 iCloud 同步（PRO）后经你自己的 iCloud 私密同步。</p>
 <h3>11.2 不联网能用吗？</h3>
-<p>能。药品管理、打卡、提醒、统计、本地备份都无需联网。只有 iCloud 备份/同步、兑换码、内购/恢复购买需要网络。</p>
-
-<h3>11.3 打卡会影响库存吗？</h3>
-<p>会。每次打卡自动扣减一次用量的库存；删除/重置记录会自动退回库存。</p>
-
-<h3>11.4 为什么提醒没响？</h3>
+<p>能。药品管理/打卡/提醒/统计/本地备份都无需联网；仅 iCloud 备份同步、兑换码、内购/恢复购买需网络。</p>
+<h3>11.3 打卡影响库存吗？</h3>
+<p>会，打卡自动扣一次用量；删除/重置记录自动退回。</p>
+<h3>11.4 提醒没响？</h3>
 <ul>
-  <li>检查系统通知权限是否开启；</li>
-  <li>检查药品是否处于「在用」状态（停用/关闭药箱会暂停提醒）；</li>
-  <li>检查用药时间与当前时间是否匹配。</li>
+  <li>检查系统通知权限；</li>
+  <li>检查药品是否「在用」（停用/关药箱会暂停提醒）；</li>
+  <li>检查用药时间。</li>
 </ul>
-
 <h3>11.5 免责声明</h3>
-<p class="warn">⚠️ 本 App 仅用于用药记录与提醒，<strong>不构成任何医疗建议</strong>。请严格遵医嘱用药，如有疑问请咨询医生或药师。</p>
-
+<p class="warn">⚠️ 本 App 仅用于用药记录与提醒，<strong>不构成医疗建议</strong>，请遵医嘱。</p>
 <h3>11.6 联系我们</h3>
-<p>如有使用问题，请发邮件至：<strong>jianjibox@outlook.com</strong></p>
+<p>📧 <strong>jianjibox@outlook.com</strong></p>
+</div>
+
 </div>
 
 <div class="divider"></div>
-<p class="update-date">感谢使用简记药箱，祝你健康！</p>
+
+<!-- ==================== English ==================== -->
+<div id="en">
+
+<div class="card" id="en-quick">
+<h2 class="en">1. Quick Start (First Use)</h2>
+<p>On first launch you'll see 5 intro pages. Tap "Skip" (top right) or "Get Started" on the last page.</p>
+<div class="step"><div class="step-num">1</div><div><strong>Allow Notifications</strong> — tap "Allow" when prompted; reminders depend on it.</div></div>
+<div class="step"><div class="step-num">2</div><div><strong>Confirm your box</strong> — a "Me" box is pre-created; you can rename it.</div></div>
+<div class="step"><div class="step-num">3</div><div><strong>Add a medication</strong> — tap the "Medbox" tab → "+" → photo or manual entry.</div></div>
+<div class="step"><div class="step-num">4</div><div><strong>Punch in</strong> — when it's time, the "Today" tab shows pending doses; tap to log.</div></div>
+<div class="tip">💡 Three tabs: <strong>Today</strong> (punch-in), <strong>Medbox</strong> (manage meds), <strong>Data</strong> (history & stats).</div>
+</div>
+
+<div class="card" id="en-box">
+<h2 class="en">2. Medbox (Pill Box) Management</h2>
+<h3>2.1 Switch boxes</h3>
+<p>Swipe the top tab bar in the "Medbox" tab.</p>
+<h3>2.2 Manage boxes</h3>
+<p>Tap "Manage" (top left):</p>
+<ul>
+  <li><strong>New</strong> — tap "+".</li>
+  <li><strong>Rename</strong> — tap the edit icon.</li>
+  <li><strong>Close (archive)</strong> — pauses that box; reopen anytime.</li>
+  <li><strong>Delete</strong> — moves meds to Recycle Bin.</li>
+</ul>
+<div class="tip">💡 Free: 1 box. PRO: up to 10 boxes.</div>
+</div>
+
+<div class="card" id="en-med">
+<h2 class="en">3. Adding a Medication</h2>
+<h3>3.1 Two ways</h3>
+<ul><li><strong>Photo OCR</strong> — snap the package, auto-detects name/dose/unit.</li><li><strong>Manual</strong> — type everything.</li></ul>
+<h3>3.2 Fields</h3>
+<ul><li><strong>Name</strong> (required), <strong>Custom name</strong>, <strong>Spec / Manufacturer / Photos</strong> (optional), <strong>Expiry</strong>.</li></ul>
+<h3>3.3 Dosage</h3>
+<ul><li><strong>Amount + unit</strong> (e.g. 1 tablet / 5 mL), <strong>Times</strong> (e.g. 08:00, 20:00), <strong>Meal</strong> (before/after/none).</li></ul>
+<h3>3.4 Start / End dates</h3>
+<p>Set dates for course-based auto start/stop.</p>
+<div class="tip">💡 Free: 3 meds, 1 reminder. PRO: unlimited.</div>
+</div>
+
+<div class="card" id="en-batch">
+<h2 class="en">4. Stock & Batch Management</h2>
+<p>Batches let the same med have different expiry and dosage.</p>
+<h3>4.1 Add stock</h3>
+<p>Enter "Stock" + "Expiry" when adding; later use "Restock" in details.</p>
+<h3>4.2 First-expiry-first (FIFO)</h3>
+<p>The earliest-expiry batch is consumed first.</p>
+<h3>4.3 Per-batch dosage override</h3>
+<p>A batch can override dosage/time; reminders update automatically when the batch switches.</p>
+<div class="warn">⚠️ When the current batch runs out and the next differs, you'll be notified that time/dosage changed.</div>
+</div>
+
+<div class="card" id="en-reminder">
+<h2 class="en">5. Reminders</h2>
+<h3>5.1 Notification permission</h3>
+<p>Enable in iOS Settings → Notifications → JianjiBox.</p>
+<h3>5.2 Smart offset</h3>
+<p>Reminders drift slightly around the set time (range 5/10/15/30 min, or off).</p>
+<h3>5.3 Snooze</h3>
+<p>Tap "Snooze" on a notification to remind again in 15 min.</p>
+<h3>5.4 Lock-screen privacy</h3>
+<p>Enable "Hide med name" to not show names on lock screen.</p>
+</div>
+
+<div class="card" id="en-punch">
+<h2 class="en">6. Punching In (Today)</h2>
+<p>Status is auto-judged by actual time: <strong>On time</strong> (±30 min), <strong>Early</strong>, <strong>Late</strong>.</p>
+<h3>6.1 How</h3>
+<ul><li><strong>Single</strong>: tap a pending item → "Punch".</li><li><strong>Punch all</strong>: tap "Punch all" at top.</li></ul>
+<h3>6.2 Other actions</h3>
+<ul><li><strong>Skip</strong> (no stock deduction), <strong>Forgot</strong>, <strong>Ignore</strong> (swipe left; excluded from stats).</li></ul>
+<div class="warn">⚠️ Punching deducts stock. If insufficient, you'll be asked to restock.</div>
+<div class="tip">💡 Mistakes can be fixed in Data → History (re-punch/delete auto-returns stock).</div>
+</div>
+
+<div class="card" id="en-history">
+<h2 class="en">7. History & Statistics</h2>
+<h3>7.1 History</h3>
+<p>Day view with a month calendar. Tap a record to re-punch, delete, or mark forgotten.</p>
+<h3>7.2 Stats</h3>
+<p>Pie chart + total punches / med types / on-time rate / batch consumption / time distribution. Switch "This month / This year / All".</p>
+<h3>7.3 Export report (PRO)</h3>
+<p>Export a PDF medication report.</p>
+</div>
+
+<div class="card" id="en-data">
+<h2 class="en">8. Backup & Restore</h2>
+<h3>8.1 Local backup (JSON)</h3>
+<p>Settings → Local Data Backup: export a JSON file / import to restore (overwrites current data).</p>
+<h3>8.2 iCloud backup (PRO)</h3>
+<p>Settings → iCloud Sync → Data Backup:</p>
+<ul>
+  <li><strong>Backup now</strong> — create a backup to iCloud Drive.</li>
+  <li><strong>Restore</strong> — swipe left on a backup → "Restore".</li>
+  <li><strong>Delete</strong> — swipe left → "Delete".</li>
+  <li><strong>Share</strong> — swipe right → "Share" to save/share the backup file.</li>
+</ul>
+<p>Each device keeps up to <strong>20</strong> backups; the oldest is auto-deleted.</p>
+<p><strong>Device sync</strong>: iCloud auto-sync has <strong>no device limit</strong> — any device signed into the same iCloud account syncs. The "20 per device" only refers to iCloud Drive <strong>backup snapshots</strong>, kept per device.</p>
+<h3>8.3 iCloud auto-sync (PRO)</h3>
+<p>Turn on to auto-sync meds & settings across devices.</p>
+<div class="warn">⚠️ Free: only "Me" box export/import. Multi-box backup needs PRO.</div>
+</div>
+
+<div class="card" id="en-pro">
+<h2 class="en">9. PRO Membership</h2>
+<p>PRO unlocks: multiple boxes (10), unlimited meds/reminders, multiple photos, PDF report export, iCloud sync & backup, more themes, free future updates.</p>
+<h3>9.1 Purchase / Redeem / Restore</h3>
+<ul>
+  <li><strong>Unlock now</strong> — App Store purchase.</li>
+  <li><strong>I have a code</strong> — enter an 8-digit redeem code.</li>
+  <li><strong>Restore purchase (redeem)</strong> — recover prior PRO.</li>
+</ul>
+<div class="tip">💡 Restoring requires a network connection.</div>
+</div>
+
+<div class="card" id="en-settings">
+<h2 class="en">10. Settings & Personalization</h2>
+<ul>
+  <li><strong>Theme color / Text size / Appearance</strong> (light/dark/system).</li>
+  <li><strong>Language</strong>: 简体 / 繁體 / English / 日本語 / System.</li>
+  <li><strong>Notifications</strong>: smart offset, hide med name, low-stock.</li>
+  <li><strong>Clear data</strong>: clear boxes & meds (keep records) or clear all local data (irreversible).</li>
+</ul>
+</div>
+
+<div class="card" id="en-faq">
+<h2 class="en">11. FAQ & Notes</h2>
+<h3>11.1 Where is data stored?</h3>
+<p>Locally on device by default; with iCloud sync (PRO), synced privately via your own iCloud.</p>
+<h3>11.2 Works offline?</h3>
+<p>Yes — meds, punch-in, reminders, stats, local backup all work offline. Only iCloud backup/sync, redeem, purchase/restore need network.</p>
+<h3>11.3 Does punching affect stock?</h3>
+<p>Yes, punching deducts one dose; delete/reset auto-returns it.</p>
+<h3>11.4 Reminder not firing?</h3>
+<ul><li>Check notification permission;</li><li>Check the med is active;</li><li>Check the scheduled time.</li></ul>
+<h3>11.5 Disclaimer</h3>
+<p class="warn">⚠️ This app is for tracking & reminders only, and is <strong>not medical advice</strong>. Follow your doctor's instructions.</p>
+<h3>11.6 Contact</h3>
+<p>📧 <strong>jianjibox@outlook.com</strong></p>
+</div>
+
+</div>
+
+<div class="divider"></div>
+<p class="update-date">感谢使用简记药箱，祝你健康！ · Thanks for using JianjiBox!</p>
 
 </div>
 

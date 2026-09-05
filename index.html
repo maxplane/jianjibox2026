@@ -3,160 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>简记药箱 · 隐私政策</title>
+<title>简记药箱 · JianjiBox</title>
 <style>
-  :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --blue: #007AFF; }
+  :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-  .hero { background: linear-gradient(135deg, var(--primary) 0%, #1a8a9f 100%); color: #fff; text-align: center; padding: 56px 20px 40px; }
-  .hero h1 { font-size: 2.2rem; font-weight: 700; }
-  .hero p { font-size: 1rem; opacity: .85; margin-top: 6px; }
-  .container { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
-  .card { background: var(--card); border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
-  h2 { font-size: 1.25rem; color: var(--primary); margin-bottom: 16px; }
-  h3 { font-size: 1rem; margin: 16px 0 8px; }
-  p, li { font-size: .95rem; color: var(--text-secondary); margin-bottom: 8px; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 6px; }
-  .en { color: var(--blue); }
-  .divider { border-top: 1px solid var(--border); margin: 24px 0; }
-  .update-date { text-align: center; font-size: .85rem; color: #aaa; margin-bottom: 24px; }
+  .hero { background: linear-gradient(135deg, var(--primary) 0%, #1a8a9f 100%); color: #fff; text-align: center; padding: 64px 20px 48px; }
+  .hero h1 { font-size: 2.4rem; font-weight: 700; }
+  .hero p { font-size: 1rem; opacity: .85; margin-top: 8px; }
+  .container { max-width: 560px; margin: 0 auto; padding: 40px 20px 80px; }
+  .links { display: flex; flex-direction: column; gap: 16px; }
+  a.card { display: flex; align-items: center; gap: 16px; background: var(--card); border-radius: 16px; padding: 24px; text-decoration: none; color: var(--text); box-shadow: 0 2px 12px rgba(0,0,0,.05); transition: transform .15s; }
+  a.card:hover { transform: translateY(-2px); }
+  .icon { font-size: 2rem; }
+  .card h2 { font-size: 1.15rem; }
+  .card p { font-size: .9rem; color: var(--text-secondary); }
   footer { text-align: center; padding: 32px 20px; font-size: .8rem; color: #aaa; }
-  footer a { color: var(--primary); text-decoration: none; }
-  @media (max-width: 600px) { .hero h1 { font-size: 1.6rem; } .card { padding: 20px; } }
+  @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <h1>🔐 简记药箱 · 隐私政策</h1>
-  <p>JianjiBox — Privacy Policy</p>
+  <h1>💊 简记药箱</h1>
+  <p>JianjiBox · 简单记录 健康生活</p>
 </div>
 
 <div class="container">
-
-<p class="update-date">📅 最后更新日期：2026 年 7 月</p>
-
-<!-- ========== 中文版 ========== -->
-<div id="zh">
-
-<div class="card"><h2>📋 概述</h2>
-  <p>本 App 的设计初衷是帮助你轻松记录和管理用药情况，同时最大程度保护你的个人隐私。</p>
+  <div class="links">
+    <a class="card" href="help.html">
+      <div class="icon">📖</div>
+      <div><h2>使用手册</h2><p>User Guide</p></div>
+    </a>
+    <a class="card" href="privacy.html">
+      <div class="icon">🔐</div>
+      <div><h2>隐私政策</h2><p>Privacy Policy</p></div>
+    </a>
+  </div>
 </div>
 
-<div class="card"><h2>⚠️ 免责声明</h2>
-  <p>本 App 仅用于用药记录与提醒，不构成任何医疗建议，请遵医嘱用药。</p>
-</div>
+<footer>© 2026 简记药箱 JianjiBox</footer>
 
-<div class="card"><h2>1. 数据收集</h2>
-  <p><strong>我们不收集任何个人信息。</strong></p>
-  <p>本 App 不会以任何形式收集、存储或上传你的：</p>
-  <ul>
-    <li>姓名、性别、年龄、联系方式等个人身份信息；</li>
-    <li>用药记录、打卡历史、药品库存等数据；</li>
-    <li>设备信息、IP 地址、位置信息等使用数据。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>2. 数据存储</h2>
-  <p>你的所有用药记录、打卡数据、药箱信息，默认仅保存在你的<strong>设备本地</strong>。</p>
-  <p>如果你开启了 iCloud 同步功能，数据会通过 Apple 的 iCloud 服务在你自己的设备间进行私密同步。<strong>我们无法访问你的 iCloud 数据。</strong></p>
-</div>
-
-<div class="card"><h2>3. 数据共享</h2>
-  <p>我们不会与任何第三方共享、出售、出租或转让你的任何数据。</p>
-</div>
-
-<div class="card"><h2>4. 第三方服务</h2>
-  <p>本 App 不使用任何第三方分析工具、广告 SDK 或追踪 SDK。</p>
-</div>
-
-<div class="card"><h2>5. 权限请求</h2>
-  <p>本 App 仅在必要场景下向你请求权限：</p>
-  <ul>
-    <li><strong>相机</strong>：仅用于扫描药盒条码或拍摄药盒照片，照片仅保存在本地，不上传任何服务器。</li>
-    <li><strong>通知</strong>：仅用于本地用药提醒，通知内容不会发送到任何服务器。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>6. 你的权利</h2>
-  <p>你的数据完全属于你自己。你可以随时在本 App 中：</p>
-  <ul>
-    <li>查看、修改、删除你的所有记录；</li>
-    <li>导出你的数据（JSON 格式）；</li>
-    <li>关闭 iCloud 同步功能；</li>
-    <li>卸载 App —— 此时所有本地数据将被清除。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>7. 联系我们</h2>
-  <p>如有任何隐私相关问题，请通过以下方式联系开发者：</p>
-  <p>📧 邮箱：<strong>jianjibox@outlook.com</strong></p>
-  <p>感谢你的信任。</p>
-</div>
-
-<div class="divider"></div>
-
-<!-- ========== English ========== -->
-<div id="en">
-<div class="card"><h2 class="en">📋 Overview</h2>
-  <p>The App is designed to help you easily track and manage your medication, while protecting your privacy to the greatest extent possible.</p>
-</div>
-
-<div class="card"><h2 class="en">⚠️ Disclaimer</h2>
-  <p>This App is for medication tracking and reminders only, and does not constitute medical advice. Please follow your doctor's instructions.</p>
-</div>
-
-<div class="card"><h2 class="en">1. Data Collection</h2>
-  <p><strong>We do not collect any personal information.</strong></p>
-  <p>The App does not collect, store, or upload in any form:</p>
-  <ul>
-    <li>Personal identity information such as name, gender, age, or contact details;</li>
-    <li>Medication records, dose history, medication inventory, or other health data;</li>
-    <li>Device information, IP address, location data, or other usage data.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">2. Data Storage</h2>
-  <p>All your medication records, dose logs, and pillbox information are stored <strong>locally on your device</strong> by default.</p>
-  <p>If you enable iCloud sync, your data is synced privately across your own devices via Apple's iCloud service. <strong>We cannot access your iCloud data.</strong></p>
-</div>
-
-<div class="card"><h2 class="en">3. Data Sharing</h2>
-  <p>We do not share, sell, rent, or transfer any of your data to any third party.</p>
-</div>
-
-<div class="card"><h2 class="en">4. Third-Party Services</h2>
-  <p>The App does not use any third-party analytics tools, advertising SDKs, or tracking SDKs.</p>
-</div>
-
-<div class="card"><h2 class="en">5. Permission Requests</h2>
-  <p>The App only requests permissions when necessary:</p>
-  <ul>
-    <li><strong>Camera</strong>: Used only for scanning medication barcodes or capturing medicine packaging photos. Photos are stored locally and never uploaded to any server.</li>
-    <li><strong>Notifications</strong>: Used only for local medication reminders. Notification content is never sent to any server.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">6. Your Rights</h2>
-  <p>Your data belongs entirely to you. You may at any time within the App:</p>
-  <ul>
-    <li>View, edit, and delete all your records;</li>
-    <li>Export your data (JSON format);</li>
-    <li>Disable iCloud sync;</li>
-    <li>Uninstall the App — all local data will be removed.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">7. Contact Us</h2>
-  <p>If you have any privacy-related questions, please contact the developer:</p>
-  <p>📧 Email: <strong>jianjibox@outlook.com</strong></p>
-  <p>Thank you for your trust.</p>
-</div>
-</div>
-
-</div>
-
-<footer>&copy; 2026 简记药箱 JianjiBox — Designed by Jianjibox2026 · <a href="mailto:jianjibox@outlook.com">Contact</a></footer>
 </body>
 </html>
