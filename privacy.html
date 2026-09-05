@@ -7,19 +7,21 @@
 <style>
   :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --blue: #007AFF; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "PingFang TC", "Hiragino Sans", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
   .hero { background: linear-gradient(135deg, var(--primary) 0%, #1a8a9f 100%); color: #fff; text-align: center; padding: 56px 20px 40px; }
   .hero h1 { font-size: 2.2rem; font-weight: 700; }
   .hero p { font-size: 1rem; opacity: .85; margin-top: 6px; }
   .container { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
   .card { background: var(--card); border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.04); }
   h2 { font-size: 1.25rem; color: var(--primary); margin-bottom: 16px; }
-  h3 { font-size: 1rem; margin: 16px 0 8px; }
+  h3 { font-size: 1rem; margin: 16px 0 8px; color: var(--text); }
   p, li { font-size: .95rem; color: var(--text-secondary); margin-bottom: 8px; }
-  ul { padding-left: 20px; }
+  ul { padding-left: 22px; }
   li { margin-bottom: 6px; }
-  .en { color: var(--blue); }
-  .divider { border-top: 1px solid var(--border); margin: 24px 0; }
+  strong { color: var(--text); }
+  .lang-nav { text-align:center; margin-bottom: 24px; }
+  .lang-nav a { display:inline-block; margin: 4px 8px; color: var(--primary); text-decoration:none; font-weight:600; }
+  .divider { border-top: 1px solid var(--border); margin: 32px 0; }
   .update-date { text-align: center; font-size: .85rem; color: #aaa; margin-bottom: 24px; }
   footer { text-align: center; padding: 32px 20px; font-size: .8rem; color: #aaa; }
   footer a { color: var(--primary); text-decoration: none; }
@@ -35,128 +37,73 @@
 
 <div class="container">
 
-<p class="update-date">📅 最后更新日期：2026 年 9 月</p>
+<p class="update-date">📅 最后更新日期：2026 年 9 月 5 日</p>
 
-<!-- ========== 中文版 ========== -->
+<div class="lang-nav">
+  <a href="#zh">简体中文</a> · <a href="#zh-Hant">繁體中文</a> · <a href="#en">English</a> · <a href="#ja">日本語</a>
+</div>
+
+<!-- ========== 简体中文 ========== -->
 <div id="zh">
-
-<div class="card"><h2>📋 概述</h2>
-  <p>本 App 的设计初衷是帮助你轻松记录和管理用药情况，同时最大程度保护你的个人隐私。</p>
+<div class="card"><h2>📋 概述</h2><p>本 App 的设计初衷是帮助你轻松记录和管理用药情况，同时最大程度保护你的个人隐私。</p></div>
+<div class="card"><h2>⚠️ 免责声明</h2><p>本 App 仅用于用药记录与提醒，不构成任何医疗建议，请遵医嘱用药。</p></div>
+<div class="card"><h2>1. 数据收集</h2><p><strong>我们不收集任何个人信息。</strong></p><p>本 App 不会以任何形式收集、存储或上传你的：</p><ul><li>姓名、性别、年龄、联系方式等个人身份信息；</li><li>用药记录、打卡历史、药品库存等数据；</li><li>设备信息、IP 地址、位置信息等使用数据。</li></ul></div>
+<div class="card"><h2>2. 数据存储</h2><p>你的所有用药记录、打卡数据、药箱信息，默认仅保存在你的<strong>设备本地</strong>。</p><p>如果你开启了 iCloud 同步功能，数据会通过 Apple 的 iCloud 服务在你自己的设备间进行私密同步。<strong>我们无法访问你的 iCloud 数据。</strong></p></div>
+<div class="card"><h2>3. 数据共享</h2><p>我们不会与任何第三方共享、出售、出租或转让你的任何数据。</p></div>
+<div class="card"><h2>4. 第三方服务</h2><p>本 App 不使用任何第三方分析工具、广告 SDK 或追踪 SDK。</p></div>
+<div class="card"><h2>5. 权限请求</h2><p>本 App 仅在必要场景下向你请求权限：</p><ul><li><strong>相机</strong>：仅用于扫描药盒条码或拍摄药盒照片，照片仅保存在本地。</li><li><strong>相册</strong>：仅用于从相册中选择药品照片，照片仅保存在本地。</li><li><strong>通知</strong>：仅用于本地用药提醒。</li><li><strong>网络</strong>：仅用于 iCloud 同步及 Apple 安全服务的验证，不收集任何个人信息。</li></ul></div>
+<div class="card"><h2>6. 你的权利</h2><p>你的数据完全属于你自己。你可以随时在本 App 中：</p><ul><li>查看、修改、删除你的所有记录；</li><li>导出你的数据（JSON 格式）；</li><li>关闭 iCloud 同步功能；</li><li>卸载 App —— 此时所有本地数据将被清除。</li></ul></div>
+<div class="card"><h2>7. 联系我们</h2><p>📧 邮箱：<strong>jianjibox@outlook.com</strong></p></div>
 </div>
 
-<div class="card"><h2>⚠️ 免责声明</h2>
-  <p>本 App 仅用于用药记录与提醒，不构成任何医疗建议，请遵医嘱用药。</p>
-</div>
+<div class="divider"></div>
 
-<div class="card"><h2>1. 数据收集</h2>
-  <p><strong>我们不收集任何个人信息。</strong></p>
-  <p>本 App 不会以任何形式收集、存储或上传你的：</p>
-  <ul>
-    <li>姓名、性别、年龄、联系方式等个人身份信息；</li>
-    <li>用药记录、打卡历史、药品库存等数据；</li>
-    <li>设备信息、IP 地址、位置信息等使用数据。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>2. 数据存储</h2>
-  <p>你的所有用药记录、打卡数据、药箱信息，默认仅保存在你的<strong>设备本地</strong>。</p>
-  <p>如果你开启了 iCloud 同步功能，数据会通过 Apple 的 iCloud 服务在你自己的设备间进行私密同步。<strong>我们无法访问你的 iCloud 数据。</strong></p>
-</div>
-
-<div class="card"><h2>3. 数据共享</h2>
-  <p>我们不会与任何第三方共享、出售、出租或转让你的任何数据。</p>
-</div>
-
-<div class="card"><h2>4. 第三方服务</h2>
-  <p>本 App 不使用任何第三方分析工具、广告 SDK 或追踪 SDK。</p>
-</div>
-
-<div class="card"><h2>5. 权限请求</h2>
-  <p>本 App 仅在必要场景下向你请求权限：</p>
-  <ul>
-    <li><strong>相机</strong>：仅用于扫描药盒条码或拍摄药盒照片，照片仅保存在本地，不上传任何服务器。</li>
-    <li><strong>通知</strong>：仅用于本地用药提醒，通知内容不会发送到任何服务器。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>6. 你的权利</h2>
-  <p>你的数据完全属于你自己。你可以随时在本 App 中：</p>
-  <ul>
-    <li>查看、修改、删除你的所有记录；</li>
-    <li>导出你的数据（JSON 格式）；</li>
-    <li>关闭 iCloud 同步功能；</li>
-    <li>卸载 App —— 此时所有本地数据将被清除。</li>
-  </ul>
-</div>
-
-<div class="card"><h2>7. 联系我们</h2>
-  <p>如有任何隐私相关问题，请通过以下方式联系开发者：</p>
-  <p>📧 邮箱：<strong>jianjibox@outlook.com</strong></p>
-  <p>感谢你的信任。</p>
+<!-- ========== 繁體中文 ========== -->
+<div id="zh-Hant">
+<div class="card"><h2>📋 概述</h2><p>本 App 的設計初衷是幫助你輕鬆記錄和管理用藥情況，同時最大程度保護你的個人隱私。</p></div>
+<div class="card"><h2>⚠️ 免責聲明</h2><p>本 App 僅用於用藥記錄與提醒，不構成任何醫療建議，請遵醫囑用藥。</p></div>
+<div class="card"><h2>1. 資料收集</h2><p><strong>我們不收集任何個人資訊。</strong></p><p>本 App 不會以任何形式收集、儲存或上傳你的：</p><ul><li>姓名、性別、年齡、聯絡方式等個人身分資訊；</li><li>用藥記錄、打卡歷史、藥品庫存等資料；</li><li>裝置資訊、IP 位址、位置資訊等使用資料。</li></ul></div>
+<div class="card"><h2>2. 資料儲存</h2><p>你的所有用藥記錄、打卡資料、藥箱資訊，預設僅儲存在你的<strong>裝置本地</strong>。</p><p>如果你開啟了 iCloud 同步功能，資料會透過 Apple 的 iCloud 服務在你自己的裝置間進行私密同步。<strong>我們無法存取你的 iCloud 資料。</strong></p></div>
+<div class="card"><h2>3. 資料共享</h2><p>我們不會與任何第三方共享、出售、出租或轉讓你的任何資料。</p></div>
+<div class="card"><h2>4. 第三方服務</h2><p>本 App 不使用任何第三方分析工具、廣告 SDK 或追蹤 SDK。</p></div>
+<div class="card"><h2>5. 權限請求</h2><p>本 App 僅在必要場景下向你請求權限：</p><ul><li><strong>相機</strong>：僅用於掃描藥盒條碼或拍攝藥盒照片，照片僅儲存在本地。</li><li><strong>相簿</strong>：僅用於從相簿中選擇藥品照片，照片僅儲存在本地。</li><li><strong>通知</strong>：僅用於本地用藥提醒。</li><li><strong>網路</strong>：僅用於 iCloud 同步及 Apple 安全服務的驗證，不收集任何個人資訊。</li></ul></div>
+<div class="card"><h2>6. 你的權利</h2><p>你的資料完全屬於你自己。你可以隨時在本 App 中：</p><ul><li>檢視、修改、刪除你的所有記錄；</li><li>匯出你的資料（JSON 格式）；</li><li>關閉 iCloud 同步功能；</li><li>解除安裝 App —— 此時所有本地資料將被清除。</li></ul></div>
+<div class="card"><h2>7. 聯絡我們</h2><p>📧 電子郵件：<strong>jianjibox@outlook.com</strong></p></div>
 </div>
 
 <div class="divider"></div>
 
 <!-- ========== English ========== -->
 <div id="en">
-<div class="card"><h2 class="en">📋 Overview</h2>
-  <p>The App is designed to help you easily track and manage your medication, while protecting your privacy to the greatest extent possible.</p>
+<div class="card"><h2>📋 Overview</h2><p>The App is designed to help you easily track and manage your medication, while protecting your privacy to the greatest extent possible.</p></div>
+<div class="card"><h2>⚠️ Disclaimer</h2><p>This App is for medication tracking and reminders only, and does not constitute medical advice. Please follow your doctor's instructions.</p></div>
+<div class="card"><h2>1. Data Collection</h2><p><strong>We do not collect any personal information.</strong></p><p>The App does not collect, store, or upload in any form:</p><ul><li>Personal identity information such as name, gender, age, or contact details;</li><li>Medication records, dose history, medication inventory, or other health data;</li><li>Device information, IP address, location data, or other usage data.</li></ul></div>
+<div class="card"><h2>2. Data Storage</h2><p>All your medication records, dose logs, and pillbox information are stored <strong>locally on your device</strong> by default.</p><p>If you enable iCloud sync, your data is synced privately across your own devices via Apple's iCloud service. <strong>We cannot access your iCloud data.</strong></p></div>
+<div class="card"><h2>3. Data Sharing</h2><p>We do not share, sell, rent, or transfer your data to any third party.</p></div>
+<div class="card"><h2>4. Third-Party Services</h2><p>The App does not use any third-party analytics tools, advertising SDKs, or tracking SDKs.</p></div>
+<div class="card"><h2>5. Permission Requests</h2><p>The App only requests permissions when necessary:</p><ul><li><strong>Camera</strong>: Used only for scanning medication barcodes or capturing packaging photos. Stored locally.</li><li><strong>Photo Library</strong>: Used only for selecting medication photos. Stored locally.</li><li><strong>Notifications</strong>: Used only for local medication reminders.</li><li><strong>Network</strong>: Used only for iCloud sync and verification through Apple's secure services. No personal information is collected.</li></ul></div>
+<div class="card"><h2>6. Your Rights</h2><p>Your data belongs entirely to you. You may at any time within the App:</p><ul><li>View, edit, and delete all your records;</li><li>Export your data (JSON format);</li><li>Disable iCloud sync;</li><li>Uninstall the App — all local data will be removed.</li></ul></div>
+<div class="card"><h2>7. Contact Us</h2><p>📧 Email: <strong>jianjibox@outlook.com</strong></p></div>
 </div>
 
-<div class="card"><h2 class="en">⚠️ Disclaimer</h2>
-  <p>This App is for medication tracking and reminders only, and does not constitute medical advice. Please follow your doctor's instructions.</p>
-</div>
+<div class="divider"></div>
 
-<div class="card"><h2 class="en">1. Data Collection</h2>
-  <p><strong>We do not collect any personal information.</strong></p>
-  <p>The App does not collect, store, or upload in any form:</p>
-  <ul>
-    <li>Personal identity information such as name, gender, age, or contact details;</li>
-    <li>Medication records, dose history, medication inventory, or other health data;</li>
-    <li>Device information, IP address, location data, or other usage data.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">2. Data Storage</h2>
-  <p>All your medication records, dose logs, and pillbox information are stored <strong>locally on your device</strong> by default.</p>
-  <p>If you enable iCloud sync, your data is synced privately across your own devices via Apple's iCloud service. <strong>We cannot access your iCloud data.</strong></p>
-</div>
-
-<div class="card"><h2 class="en">3. Data Sharing</h2>
-  <p>We do not share, sell, rent, or transfer any of your data to any third party.</p>
-</div>
-
-<div class="card"><h2 class="en">4. Third-Party Services</h2>
-  <p>The App does not use any third-party analytics tools, advertising SDKs, or tracking SDKs.</p>
-</div>
-
-<div class="card"><h2 class="en">5. Permission Requests</h2>
-  <p>The App only requests permissions when necessary:</p>
-  <ul>
-    <li><strong>Camera</strong>: Used only for scanning medication barcodes or capturing medicine packaging photos. Photos are stored locally and never uploaded to any server.</li>
-    <li><strong>Notifications</strong>: Used only for local medication reminders. Notification content is never sent to any server.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">6. Your Rights</h2>
-  <p>Your data belongs entirely to you. You may at any time within the App:</p>
-  <ul>
-    <li>View, edit, and delete all your records;</li>
-    <li>Export your data (JSON format);</li>
-    <li>Disable iCloud sync;</li>
-    <li>Uninstall the App — all local data will be removed.</li>
-  </ul>
-</div>
-
-<div class="card"><h2 class="en">7. Contact Us</h2>
-  <p>If you have any privacy-related questions, please contact the developer:</p>
-  <p>📧 Email: <strong>jianjibox@outlook.com</strong></p>
-  <p>Thank you for your trust.</p>
-</div>
+<!-- ========== 日本語 ========== -->
+<div id="ja">
+<div class="card"><h2>📋 概要</h2><p>本アプリは、服薬の記録と管理を簡単にしながら、最大限にプライバシーを保護することを目的としています。</p></div>
+<div class="card"><h2>⚠️ 免責事項</h2><p>本アプリは服薬の記録とリマインダーのみを目的としており、医療上のアドバイスには該当しません。医師の指示に従って服薬してください。</p></div>
+<div class="card"><h2>1. データ収集</h2><p><strong>当方はいかなる個人情報も収集しません。</strong></p><p>本アプリは以下の情報をいかなる形でも収集、保存、アップロードすることはありません：</p><ul><li>氏名、性別、年齢、連絡先などの個人を特定できる情報；</li><li>服薬記録、服薬履歴、薬品在庫などのデータ；</li><li>端末情報、IPアドレス、位置情報などの利用データ。</li></ul></div>
+<div class="card"><h2>2. データ保存</h2><p>すべての服薬記録、服薬履歴、薬箱情報は、デフォルトで<strong>お客様の端末内にのみ</strong>保存されます。</p><p>iCloud同期を有効にした場合、データはAppleのiCloudサービスを通じてお客様ご自身の端末間でのみ同期されます。<strong>当方がお客様のiCloudデータにアクセスすることは一切ありません。</strong></p></div>
+<div class="card"><h2>3. データ共有</h2><p>当方はいかなるデータも第三者と共有、販売、貸与、譲渡することはありません。</p></div>
+<div class="card"><h2>4. 第三者サービス</h2><p>本アプリは第三者分析ツール、広告SDK、トラッキングSDKを一切使用していません。</p></div>
+<div class="card"><h2>5. 権限リクエスト</h2><p>本アプリは必要な場合にのみ権限をリクエストします：</p><ul><li><strong>カメラ</strong>：薬箱のバーコードスキャンまたは薬箱の写真撮影のみに使用。写真は端末内にのみ保存されます。</li><li><strong>フォトライブラリ</strong>：アルバムから薬品写真を選択する場合のみ使用します。</li><li><strong>通知</strong>：ローカル服薬リマインダーのみに使用します。</li><li><strong>ネットワーク</strong>：iCloud同期およびAppleの安全なサービスを通じた検証のみに使用され、個人情報は一切収集されません。</li></ul></div>
+<div class="card"><h2>6. お客様の権利</h2><p>お客様のデータは完全にお客様ご自身のものです。本アプリ内でいつでも：</p><ul><li>すべての記録の表示、編集、削除；</li><li>データのエクスポート（JSON形式）；</li><li>iCloud同期の無効化；</li><li>アプリのアンインストール —— この場合、すべてのローカルデータが削除されます。</li></ul></div>
+<div class="card"><h2>7. お問い合わせ</h2><p>📧 メール：<strong>jianjibox@outlook.com</strong></p></div>
 </div>
 
 </div>
 
-<footer>&copy; 2026 简记药箱 JianjiBox — Designed by Jianjibox2026 · <a href="mailto:jianjibox@outlook.com">Contact</a></footer>
+<footer>© 2026 简记药箱 JianjiBox · <a href="mailto:jianjibox@outlook.com">jianjibox@outlook.com</a></footer>
+
 </body>
 </html>
