@@ -35,6 +35,21 @@
   footer a { color: var(--primary); text-decoration: none; }
   @media (max-width: 600px) { .hero h1 { font-size: 1.6rem; } .card { padding: 20px; } }
 </style>
+
+/* ===== 右侧悬浮导航 ===== */
+#sidenav { position: fixed; right: 12px; top: 50%; transform: translateY(-50%); z-index: 999;
+  width: 168px; background: var(--card, #fff); border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px; box-shadow: 0 8px 28px rgba(0,0,0,.10); overflow: hidden; font-size: 12px; }
+#sidenav-top { display: block; text-align: center; padding: 10px 0; background: var(--primary, #30B0C7);
+  color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; }
+#sidenav-top:hover { opacity: .88; }
+#sidenav-toc { max-height: 56vh; overflow-y: auto; padding: 6px; }
+#sidenav-toc a { display: block; padding: 5px 8px; color: var(--text-secondary, #6e6e73);
+  text-decoration: none; border-radius: 8px; line-height: 1.45; }
+#sidenav-toc a:hover { background: rgba(48,176,199,.10); color: var(--primary, #30B0C7); }
+#sidenav-toc a.active { background: var(--primary, #30B0C7); color: #fff; font-weight: 600; }
+@media (max-width: 1100px) { #sidenav { width: 40px; border-radius: 20px; } #sidenav-toc { display: none; } #sidenav-top { font-size: 16px; } }
+
 </head>
 <body>
 
@@ -120,6 +135,92 @@
 </div>
 
 <footer>© 2026 简记药箱 JianjiBox · <a href="mailto:jianjibox@outlook.com">jianjibox@outlook.com</a></footer>
+
+
+<nav id="sidenav" aria-label="目录">
+  <a href="#" id="sidenav-top" title="回到顶部">↑</a>
+  <div id="sidenav-toc"></div>
+</nav>
+
+<script>
+(function(){
+  var topLink = document.getElementById('sidenav-top');
+  var tocBox = document.getElementById('sidenav-toc');
+  if (!topLink || !tocBox) return;
+
+  var langIds = ['zh','zh-Hant','en','ja'];
+  var langData = {};
+  var uid = 0;
+
+  function cleanTitle(t){
+    try { return t.replace(/^[\p{Extended_Pictographic}\p{So}\uFE0F\s]+/gu, '').trim(); }
+    catch(e){ return t.trim(); }
+  }
+
+  langIds.forEach(function(lid){
+    var section = document.getElementById(lid);
+    if (!section) return;
+    var items = [];
+    section.querySelectorAll('.card').forEach(function(card){
+      var h2 = card.querySelector('h2');
+      if (!h2) return;
+      var id = card.getAttribute('id');
+      if (!id){ id = 'sec-' + (++uid); card.setAttribute('id', id); }
+      items.push({ href: '#' + id, text: cleanTitle(h2.textContent) });
+    });
+    if (items.length) langData[lid] = { section: section, items: items };
+  });
+
+  if (!Object.keys(langData).length) return;
+
+  var currentLang = null, currentKey = null;
+
+  function render(){
+    var data = langData[currentLang];
+    if (!data) return;
+    var html = '';
+    data.items.forEach(function(it){
+      html += '<a href="' + it.href + '"' + (it.href === currentKey ? ' class="active"' : '') + '>' + it.text + '</a>';
+    });
+    tocBox.innerHTML = html;
+  }
+
+  function update(){
+    var threshold = Math.max(80, window.innerHeight * 0.3);
+    var newLang = null, newKey = null;
+    langIds.forEach(function(lid){
+      var d = langData[lid]; if (!d) return;
+      var r = d.section.getBoundingClientRect();
+      if (r.top <= threshold && r.bottom > threshold) newLang = lid;
+    });
+    if (!newLang) newLang = langIds[0];
+    var items = langData[newLang].items;
+    for (var i = 0; i < items.length; i++){
+      var el = document.querySelector(items[i].href);
+      if (!el) continue;
+      if (el.getBoundingClientRect().top <= threshold) newKey = items[i].href;
+    }
+    if (newLang !== currentLang || newKey !== currentKey){
+      currentLang = newLang; currentKey = newKey; render();
+    }
+  }
+
+  tocBox.addEventListener('click', function(e){
+    var a = e.target.closest('a'); if (!a) return;
+    e.preventDefault();
+    var el = document.querySelector(a.getAttribute('href'));
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  topLink.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
 
 </body>
 </html>
