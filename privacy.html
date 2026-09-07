@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>简记药箱 · 隐私政策</title>
 <style>
-  :root { --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --blue: #007AFF; }
+  :root { color-scheme: light dark; --primary: #30B0C7; --bg: #f2f4f7; --card: #ffffff; --text: #1d1d1f; --text-secondary: #6e6e73; --border: #e5e5ea; --blue: #007AFF; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "PingFang TC", "Hiragino Sans", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
   .hero { background: linear-gradient(135deg, var(--primary) 0%, #1a8a9f 100%); color: #fff; text-align: center; padding: 56px 20px 40px; }
@@ -26,6 +26,11 @@
   footer { text-align: center; padding: 32px 20px; font-size: .8rem; color: #aaa; }
   footer a { color: var(--primary); text-decoration: none; }
   @media (max-width: 600px) { .hero h1 { font-size: 1.6rem; } .card { padding: 20px; } }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0D0D0F; --card: #1C1C1E; --text: #E5E5EA; --text-secondary: #AEAEB2; --border: #2C2C2E; }
+  .update-date, footer { color: #98989E; }
+}
+
 </style>
 
 <style>
