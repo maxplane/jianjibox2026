@@ -1,0 +1,354 @@
+{
+  "zh": {
+    "s1": [
+      {
+        "file": "02-onboarding.jpg",
+        "caption": "首次打开：5 页引导，右上角可「跳过」，最后一页点「开始使用」。"
+      },
+      {
+        "file": "01-today.jpg",
+        "caption": "今日页：上方是今天的卡片与明日安排；底部固定在药盒 A/2 的格子区，右上角 2/2 表示第 2 台。"
+      }
+    ],
+    "s3": [
+      {
+        "file": "03-medicines.jpg",
+        "caption": "家庭药箱列表：按通用名合计，右侧是合计剩余；示例为阿托伐他汀钙片、氯霉素滴眼液、布洛芬缓释胶囊。"
+      },
+      {
+        "file": "21-add-drug.jpg",
+        "caption": "添加药品表单：照片、药名、自定义名、规格、厂家、有效期、数量、备注；药名/数量/有效期必填。"
+      }
+    ],
+    "s4": [
+      {
+        "file": "04-plans.jpg",
+        "caption": "用药计划列表：按家人分组，卡片显示状态、提醒渠道、占用的格位与周期。"
+      },
+      {
+        "file": "05-plan-new.jpg",
+        "caption": "新建计划：「下发到」选药盒，「放入药格」每个时间点选一行；已占用的行（如「第 4 行 已占用：爷爷」）不能选。"
+      }
+    ],
+    "s8": [
+      {
+        "file": "06-boxes.jpg",
+        "caption": "实体药盒列表：药盒 A 在线、药盒 2 检测中；每台可点进设备页。"
+      },
+      {
+        "file": "13-addbox.jpg",
+        "caption": "绑定设备：「已经在 Wi-Fi 上的药盒」可直接找回；新药盒走蓝牙扫描。"
+      }
+    ],
+    "s9": [
+      {
+        "file": "07-device-A.jpg",
+        "caption": "设备页：Wi-Fi 状态、IP 地址、配网入口、个性化设置、药格管理、固件更新与重置。"
+      }
+    ],
+    "s10": [
+      {
+        "file": "17-behavior.jpg",
+        "caption": "个性化设置：提醒灯色、超时灯色、闪烁速度、声音、响铃模式、音量、响铃时长。"
+      }
+    ],
+    "s11": [
+      {
+        "file": "01-today.jpg",
+        "caption": "今日页：上方是今天的卡片与明日安排；底部固定在药盒 A/2 的格子区，右上角 2/2 表示第 2 台。"
+      }
+    ],
+    "s12": [
+      {
+        "file": "01-today.jpg",
+        "caption": "今日页：上方是今天的卡片与明日安排；底部固定在药盒 A/2 的格子区，右上角 2/2 表示第 2 台。"
+      }
+    ],
+    "s13": [
+      {
+        "file": "09-records-history.jpg",
+        "caption": "打卡记录：每条卡片有状态与渠道徽标；第三行是真实药盒与格位（药盒 2 · E4、药盒 A · E1）。"
+      },
+      {
+        "file": "08-records.jpg",
+        "caption": "记录页首页：打卡记录、用药统计、导出用药记录（PRO）。"
+      }
+    ],
+    "s14": [
+      {
+        "file": "10-me.jpg",
+        "caption": "「我 → 提醒与角标」：排期自检、待发提醒、下一条、测试提醒，以及 5 个提醒开关。"
+      }
+    ],
+    "s15": [
+      {
+        "file": "11-settings.jpg",
+        "caption": "设置里的数据安全：iCloud、本地数据备份、时区同步；时区默认关闭（固定北京时间）。"
+      }
+    ],
+    "s17": [
+      {
+        "file": "11-settings.jpg",
+        "caption": "设置里的数据安全：iCloud、本地数据备份、时区同步；时区默认关闭（固定北京时间）。"
+      }
+    ],
+    "s18": [
+      {
+        "file": "06-boxes.jpg",
+        "caption": "实体药盒列表：药盒 A 在线、药盒 2 检测中；每台可点进设备页。"
+      }
+    ]
+  },
+  "zh-Hant": {
+    "s1": [
+      {
+        "file": "hant-today.jpg",
+        "caption": "今日頁：上方是今天的卡片與明日安排；底部固定在藥盒 A/2 的格子區，右上角 2/2 表示第 2 臺。"
+      }
+    ],
+    "s3": [
+      {
+        "file": "hant-medicines.jpg",
+        "caption": "家庭藥箱列表：按通用名合計，右側是合計剩餘；示例為阿托伐他汀鈣片、氯黴素滴眼液、布洛芬緩釋膠囊。"
+      }
+    ],
+    "s4": [
+      {
+        "file": "hant-plans.jpg",
+        "caption": "用藥計畫列表：依家人分組，卡片顯示狀態、提醒管道、占用的格位與週期。"
+      },
+      {
+        "file": "hant-plan-new.jpg",
+        "caption": "新建計畫：「下發到」選藥盒，「放入藥格」每個時間點選一行；已占用的行（如「第 4 行 已占用：爺爺」）不能選。"
+      }
+    ],
+    "s8": [
+      {
+        "file": "hant-boxes.jpg",
+        "caption": "實體藥盒列表：藥盒 A 在線、藥盒 2 檢測中；每臺可點進設備頁。"
+      }
+    ],
+    "s9": [
+      {
+        "file": "hant-device.jpg",
+        "caption": "設備頁：Wi-Fi 狀態、IP 位址、配網入口、個人化設定、藥格管理、韌體更新與重置。"
+      }
+    ],
+    "s10": [
+      {
+        "file": "hant-behavior.jpg",
+        "caption": "個人化設定：提醒燈色、逾時燈色、閃爍速度、聲音、響鈴模式、音量、響鈴時長。"
+      }
+    ],
+    "s11": [
+      {
+        "file": "hant-today.jpg",
+        "caption": "今日頁：上方是今天的卡片與明日安排；底部固定在藥盒 A/2 的格子區，右上角 2/2 表示第 2 臺。"
+      }
+    ],
+    "s12": [
+      {
+        "file": "hant-today.jpg",
+        "caption": "今日頁：上方是今天的卡片與明日安排；底部固定在藥盒 A/2 的格子區，右上角 2/2 表示第 2 臺。"
+      }
+    ],
+    "s13": [
+      {
+        "file": "hant-records-history.jpg",
+        "caption": "服藥記錄：每張卡片有狀態與管道徽標；第三行是真實藥盒與格位（藥盒 2 · E4、藥盒 A · E1）。"
+      }
+    ],
+    "s14": [
+      {
+        "file": "hant-settings.jpg",
+        "caption": "設定裡的資料安全：iCloud、本機資料備份、時區同步；時區預設關閉（固定北京時間）。"
+      }
+    ],
+    "s15": [
+      {
+        "file": "hant-settings.jpg",
+        "caption": "設定裡的資料安全：iCloud、本機資料備份、時區同步；時區預設關閉（固定北京時間）。"
+      }
+    ],
+    "s17": [
+      {
+        "file": "hant-settings.jpg",
+        "caption": "設定裡的資料安全：iCloud、本機資料備份、時區同步；時區預設關閉（固定北京時間）。"
+      }
+    ],
+    "s18": [
+      {
+        "file": "hant-boxes.jpg",
+        "caption": "實體藥盒列表：藥盒 A 在線、藥盒 2 檢測中；每臺可點進設備頁。"
+      }
+    ]
+  },
+  "en": {
+    "s1": [
+      {
+        "file": "en-today.jpg",
+        "caption": "Today: today’s cards and tomorrow preview above; the slot area for box A/2 is fixed at the bottom; 2/2 means the second box."
+      }
+    ],
+    "s3": [
+      {
+        "file": "en-medicines.jpg",
+        "caption": "Family Medicine Box list grouped by generic name, with total remaining on the right."
+      }
+    ],
+    "s4": [
+      {
+        "file": "en-plans.jpg",
+        "caption": "Medication Plan list grouped by family member; each card shows status, channel, occupied rows and period."
+      },
+      {
+        "file": "en-plan-new.jpg",
+        "caption": "New plan: choose the box under “Send to”; choose one row per time point under “Slot”; occupied rows (e.g. row 4, Grandpa) cannot be selected."
+      }
+    ],
+    "s8": [
+      {
+        "file": "en-boxes.jpg",
+        "caption": "Pill box list: Box A online, Box 2 detecting; tap a box to open its device page."
+      }
+    ],
+    "s9": [
+      {
+        "file": "en-device.jpg",
+        "caption": "Device page: Wi-Fi status, IP address, network setup, personalization, slot management, firmware update and reset."
+      }
+    ],
+    "s10": [
+      {
+        "file": "en-behavior.jpg",
+        "caption": "Personalization: reminder colour, overdue colour, blink speed, sound, ring pattern, volume, ring duration."
+      }
+    ],
+    "s11": [
+      {
+        "file": "en-today.jpg",
+        "caption": "Today: today’s cards and tomorrow preview above; the slot area for box A/2 is fixed at the bottom; 2/2 means the second box."
+      }
+    ],
+    "s12": [
+      {
+        "file": "en-today.jpg",
+        "caption": "Today: today’s cards and tomorrow preview above; the slot area for box A/2 is fixed at the bottom; 2/2 means the second box."
+      }
+    ],
+    "s13": [
+      {
+        "file": "en-records-history.jpg",
+        "caption": "Logs: each card shows status and channel badge; the third line is the real box and slot (Box 2 · E4, Box A · E1)."
+      }
+    ],
+    "s14": [
+      {
+        "file": "en-settings.jpg",
+        "caption": "Data Security in Settings: iCloud, local backup, time-zone sync (off by default, fixed to Beijing time)."
+      }
+    ],
+    "s15": [
+      {
+        "file": "en-settings.jpg",
+        "caption": "Data Security in Settings: iCloud, local backup, time-zone sync (off by default, fixed to Beijing time)."
+      }
+    ],
+    "s17": [
+      {
+        "file": "en-settings.jpg",
+        "caption": "Data Security in Settings: iCloud, local backup, time-zone sync (off by default, fixed to Beijing time)."
+      }
+    ],
+    "s18": [
+      {
+        "file": "en-boxes.jpg",
+        "caption": "Pill box list: Box A online, Box 2 detecting; tap a box to open its device page."
+      }
+    ]
+  },
+  "ja": {
+    "s1": [
+      {
+        "file": "ja-today.jpg",
+        "caption": "今日ページ：上に今日のカードと明日の予定、下にピルボックスA/2のスロット領域。右上の2/2は2台目を表します。"
+      }
+    ],
+    "s3": [
+      {
+        "file": "ja-medicines.jpg",
+        "caption": "ファミリー薬箱の一覧。一般名で合計し、右側に残量を表示します。"
+      }
+    ],
+    "s4": [
+      {
+        "file": "ja-plans.jpg",
+        "caption": "お薬プラン一覧。家族ごとにまとまり、状態・通知経路・使用中の行・期間を表示します。"
+      },
+      {
+        "file": "ja-plan-new.jpg",
+        "caption": "新規プラン：「送信先」でピルボックス、「スロット」で時刻ごとに1行を選択。使用中の行（例：4行目、祖父）は選べません。"
+      }
+    ],
+    "s8": [
+      {
+        "file": "ja-boxes.jpg",
+        "caption": "ピルボックス一覧：ピルボックスAはオンライン、2は検出中。タップでデバイスページへ。"
+      }
+    ],
+    "s9": [
+      {
+        "file": "ja-device.jpg",
+        "caption": "デバイスページ：Wi-Fi 状態、IP アドレス、ネットワーク設定、個別設定、スロット管理、ファームウェア更新、リセット。"
+      }
+    ],
+    "s10": [
+      {
+        "file": "ja-behavior.jpg",
+        "caption": "個別設定：通知色、超過色、点滅速度、音、鳴り方、音量、鳴る時間。"
+      }
+    ],
+    "s11": [
+      {
+        "file": "ja-today.jpg",
+        "caption": "今日ページ：上に今日のカードと明日の予定、下にピルボックスA/2のスロット領域。右上の2/2は2台目を表します。"
+      }
+    ],
+    "s12": [
+      {
+        "file": "ja-today.jpg",
+        "caption": "今日ページ：上に今日のカードと明日の予定、下にピルボックスA/2のスロット領域。右上の2/2は2台目を表します。"
+      }
+    ],
+    "s13": [
+      {
+        "file": "ja-records-history.jpg",
+        "caption": "服薬記録：各カードに状態と経路バッジ、3行目に実際のピルボックスとマス（ピルボックス2 · E4、A · E1）。"
+      }
+    ],
+    "s14": [
+      {
+        "file": "ja-settings.jpg",
+        "caption": "設定のデータセキュリティ：iCloud、ローカルバックアップ、タイムゾーン同期（既定はオフ、北京時間固定）。"
+      }
+    ],
+    "s15": [
+      {
+        "file": "ja-settings.jpg",
+        "caption": "設定のデータセキュリティ：iCloud、ローカルバックアップ、タイムゾーン同期（既定はオフ、北京時間固定）。"
+      }
+    ],
+    "s17": [
+      {
+        "file": "ja-settings.jpg",
+        "caption": "設定のデータセキュリティ：iCloud、ローカルバックアップ、タイムゾーン同期（既定はオフ、北京時間固定）。"
+      }
+    ],
+    "s18": [
+      {
+        "file": "ja-boxes.jpg",
+        "caption": "ピルボックス一覧：ピルボックスAはオンライン、2は検出中。タップでデバイスページへ。"
+      }
+    ]
+  }
+}
